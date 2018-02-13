@@ -1,9 +1,8 @@
-'use strict';
+"use strict"
 
-var express = require("express");
-
-var app = express();
-
-app.get("/", function(httpRequest, httpResponse) {
-  httpResponse.send("Hello, World!");
-});
+angular.module("steamApp", ["ngRoute"]).config(
+  $routeProvider.when("/?/auth/openid/", {
+    templateUrl: "partial/navbar.html",
+    controller: "navCtrl"
+  })
+);
